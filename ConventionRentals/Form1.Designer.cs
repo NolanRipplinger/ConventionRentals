@@ -168,6 +168,7 @@
             this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "RentalForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Convention Rental Program";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.RentalsBox.ResumeLayout(false);

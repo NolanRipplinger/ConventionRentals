@@ -42,6 +42,7 @@
             // 
             // CheckInID
             // 
+            this.CheckInID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CheckInID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.CheckInID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckInID.HideSelection = false;
@@ -97,12 +98,23 @@
             // 
             // CheckInAmount
             // 
+            this.CheckInAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CheckInAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckInAmount.Location = new System.Drawing.Point(222, 171);
+            this.CheckInAmount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.CheckInAmount.Name = "CheckInAmount";
             this.CheckInAmount.Size = new System.Drawing.Size(225, 31);
             this.CheckInAmount.TabIndex = 5;
             this.CheckInAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CheckInAmount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // CheckInSubmit
             // 
@@ -132,13 +144,13 @@
             this.CheckInItemName.Location = new System.Drawing.Point(222, 108);
             this.CheckInItemName.MaxLength = 100;
             this.CheckInItemName.Name = "CheckInItemName";
-            this.CheckInItemName.ReadOnly = true;
             this.CheckInItemName.Size = new System.Drawing.Size(225, 31);
             this.CheckInItemName.TabIndex = 8;
             this.CheckInItemName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CheckInForm
             // 
+            this.AcceptButton = this.CheckInSubmit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
@@ -152,12 +164,12 @@
             this.Controls.Add(this.CheckInTime);
             this.Controls.Add(this.CheckInIDLabel);
             this.Controls.Add(this.CheckInID);
-            this.Enabled = false;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CheckInForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CheckInForm";
             ((System.ComponentModel.ISupportInitialize)(this.CheckInAmount)).EndInit();
             this.ResumeLayout(false);
