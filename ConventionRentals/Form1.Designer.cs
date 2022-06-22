@@ -61,7 +61,10 @@
             // 
             // treeView1
             // 
+            this.treeView1.BackColor = System.Drawing.Color.LightGray;
             this.treeView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.treeView1.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.treeView1.HotTracking = true;
             this.treeView1.Location = new System.Drawing.Point(229, 34);
             this.treeView1.Name = "treeView1";
             treeNode1.Name = "XboxControllersNode";
@@ -108,31 +111,44 @@
             // 
             // CheckInButton
             // 
+            this.CheckInButton.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.CheckInButton.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.CheckInButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CheckInButton.ForeColor = System.Drawing.SystemColors.GrayText;
             this.CheckInButton.Location = new System.Drawing.Point(6, 19);
             this.CheckInButton.Name = "CheckInButton";
-            this.CheckInButton.Size = new System.Drawing.Size(97, 40);
+            this.CheckInButton.Size = new System.Drawing.Size(112, 40);
             this.CheckInButton.TabIndex = 2;
-            this.CheckInButton.Text = "Check In";
-            this.CheckInButton.UseVisualStyleBackColor = true;
+            this.CheckInButton.Text = "Check In Selected";
+            this.CheckInButton.UseVisualStyleBackColor = false;
+            this.CheckInButton.Click += new System.EventHandler(this.CheckInButton_Click);
             // 
             // CheckOutButton
             // 
-            this.CheckOutButton.Location = new System.Drawing.Point(6, 65);
+            this.CheckOutButton.BackColor = System.Drawing.Color.White;
+            this.CheckOutButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.CheckOutButton.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.CheckOutButton.Location = new System.Drawing.Point(6, 78);
             this.CheckOutButton.Name = "CheckOutButton";
-            this.CheckOutButton.Size = new System.Drawing.Size(97, 40);
+            this.CheckOutButton.Size = new System.Drawing.Size(112, 46);
             this.CheckOutButton.TabIndex = 3;
-            this.CheckOutButton.Text = "Check Out";
-            this.CheckOutButton.UseVisualStyleBackColor = true;
+            this.CheckOutButton.Text = "Check Out Selected";
+            this.CheckOutButton.UseVisualStyleBackColor = false;
+            this.CheckOutButton.Click += new System.EventHandler(this.CheckOutButton_Click);
             // 
             // RentalsBox
             // 
             this.RentalsBox.AutoSize = true;
             this.RentalsBox.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.RentalsBox.BackColor = System.Drawing.Color.Gainsboro;
+            this.RentalsBox.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.RentalsBox.Controls.Add(this.CheckOutButton);
             this.RentalsBox.Controls.Add(this.CheckInButton);
+            this.RentalsBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.RentalsBox.ForeColor = System.Drawing.SystemColors.InfoText;
             this.RentalsBox.Location = new System.Drawing.Point(52, 34);
             this.RentalsBox.Name = "RentalsBox";
-            this.RentalsBox.Size = new System.Drawing.Size(109, 124);
+            this.RentalsBox.Size = new System.Drawing.Size(124, 143);
             this.RentalsBox.TabIndex = 4;
             this.RentalsBox.TabStop = false;
             this.RentalsBox.Text = "Rentals";
@@ -141,11 +157,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.RentalsBox);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.treeView1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(816, 489);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(816, 489);
             this.Name = "RentalForm";
             this.Text = "Convention Rental Program";
