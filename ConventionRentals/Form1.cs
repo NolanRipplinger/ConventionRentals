@@ -19,6 +19,39 @@ namespace ConventionRentals
             
         }
 
+
+        //Selected Check in
+        private void CheckInButton_Click(object sender, EventArgs e)
+        {
+            if (treeView1.SelectedNode.Text != "Controllers") 
+            {
+                CheckInForm CheckIn = new CheckInForm();
+
+                //Modify Basic Attributes
+                CheckIn.Text = "Check In " + treeView1.SelectedNode.Text;
+
+                //Stop resizing
+                CheckIn.FormBorderStyle = FormBorderStyle.FixedDialog;
+                CheckIn.MaximizeBox = false;
+                CheckIn.MinimizeBox = false;
+
+                //Add Elements to Form
+                //Change check in item name to be treeView1.SelectedNode.Text
+
+                CheckIn.Show();
+            }
+        }
+
+        //Selected Check out
+        private void CheckOutButton_Click(object sender, EventArgs e)
+        {
+            if (treeView1.SelectedNode.Text != "Controllers")
+            {
+
+            }
+        }
+
+        //Selected a node from the tree
         private void treeView1_AfterSelect(object sender, TreeViewEventArgs e)
         {
             Bitmap bit;
