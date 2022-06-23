@@ -61,16 +61,16 @@ namespace ConventionRentals
             switch (treeView1.SelectedNode.Text) 
             {
                 case "Xbox Controller":
-                    bit = new Bitmap("E:\\Backup\\Programming\\.net\\ConventionRentals\\ConventionRentals\\img\\xbox.png");
+                    bit = new Bitmap(System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.FullName + "\\img\\xbox.png");
                     break;
                 case "Playstation Controller":
-                    bit = new Bitmap("E:\\Backup\\Programming\\.net\\ConventionRentals\\ConventionRentals\\img\\playstation.png");
+                    bit = new Bitmap(System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.FullName + "\\img\\playstation.png");
                     break;
                 case "Switch Controller":
-                    bit = new Bitmap("E:\\Backup\\Programming\\.net\\ConventionRentals\\ConventionRentals\\img\\switch.png");
+                    bit = new Bitmap(System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.FullName + "\\img\\switch.png");
                     break;
                 default:
-                    bit = new Bitmap("E:\\Backup\\Programming\\.net\\ConventionRentals\\ConventionRentals\\img\\placeholder.png");
+                    bit = new Bitmap(System.IO.Directory.GetParent(System.IO.Directory.GetCurrentDirectory()).Parent.FullName + "\\img\\placeholder.png");
                     break;
             }
 
