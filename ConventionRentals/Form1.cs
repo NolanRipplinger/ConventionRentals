@@ -49,7 +49,7 @@ namespace ConventionRentals
         {
             if (treeView1.SelectedNode.Text != "Controllers")
             {
-
+                Console.WriteLine("This would check out an item.");
             }
         }
 
