@@ -49,7 +49,7 @@ namespace ConventionRentals
         {
             if (treeView1.SelectedNode.Text != "Controllers")
             {
-
+                Console.WriteLine("This would check out an item.");
             }
         }
 
@@ -77,14 +77,28 @@ namespace ConventionRentals
             pictureBox1.Image = bit;
         }
 
+
+        //Not worried about this but it has to exist
         private void RentalsBox_Enter(object sender, EventArgs e)
         {
 
         }
 
+        //Not worried about this but it has to exist
         private void StockBox_Enter(object sender, EventArgs e)
         {
 
+        }
+
+        private void StockButton_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("This Checks the current stock.");
+
+        }
+
+        private void OutstandingRentalsButton_Click(object sender, EventArgs e)
+        {
+            Console.WriteLine("This checks outstanding rentals.");
         }
     }
 }
