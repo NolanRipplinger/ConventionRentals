@@ -56,8 +56,8 @@
             this.CheckOutButton = new System.Windows.Forms.Button();
             this.RentalsBox = new System.Windows.Forms.GroupBox();
             this.StockBox = new System.Windows.Forms.GroupBox();
-            this.StockButton = new System.Windows.Forms.Button();
             this.OutstandingRentalsButton = new System.Windows.Forms.Button();
+            this.StockButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.RentalsBox.SuspendLayout();
             this.StockBox.SuspendLayout();
@@ -173,17 +173,6 @@
             this.StockBox.Text = "Stock";
             this.StockBox.Enter += new System.EventHandler(this.StockBox_Enter);
             // 
-            // StockButton
-            // 
-            this.StockButton.BackColor = System.Drawing.Color.White;
-            this.StockButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.StockButton.Location = new System.Drawing.Point(6, 25);
-            this.StockButton.Name = "StockButton";
-            this.StockButton.Size = new System.Drawing.Size(112, 52);
-            this.StockButton.TabIndex = 0;
-            this.StockButton.Text = "Current Stock";
-            this.StockButton.UseVisualStyleBackColor = false;
-            // 
             // OutstandingRentalsButton
             // 
             this.OutstandingRentalsButton.BackColor = System.Drawing.Color.White;
@@ -194,6 +183,19 @@
             this.OutstandingRentalsButton.TabIndex = 1;
             this.OutstandingRentalsButton.Text = "Outstanding Rentals";
             this.OutstandingRentalsButton.UseVisualStyleBackColor = false;
+            this.OutstandingRentalsButton.Click += new System.EventHandler(this.OutstandingRentalsButton_Click);
+            // 
+            // StockButton
+            // 
+            this.StockButton.BackColor = System.Drawing.Color.White;
+            this.StockButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.StockButton.Location = new System.Drawing.Point(6, 25);
+            this.StockButton.Name = "StockButton";
+            this.StockButton.Size = new System.Drawing.Size(112, 52);
+            this.StockButton.TabIndex = 0;
+            this.StockButton.Text = "Current Stock";
+            this.StockButton.UseVisualStyleBackColor = false;
+            this.StockButton.Click += new System.EventHandler(this.StockButton_Click);
             // 
             // RentalForm
             // 
