@@ -1,4 +1,6 @@
-﻿namespace ConventionRentals
+﻿using System.Data.Odbc;
+
+namespace ConventionRentals
 {
     partial class CheckInForm
     {
@@ -20,13 +22,16 @@
             base.Dispose(disposing);
         }
 
-        #region Windows Form Designer generated code
+        OdbcConnection myConnection = new OdbcConnection();
+        //myConnection.ConnectionString = "
 
-        /// <summary>
-        /// Required method for Designer support - do not modify
-        /// the contents of this method with the code editor.
-        /// </summary>
-        private void InitializeComponent()
+#region Windows Form Designer generated code
+
+/// <summary>
+/// Required method for Designer support - do not modify
+/// the contents of this method with the code editor.
+/// </summary>
+private void InitializeComponent()
         {
             this.CheckInID = new System.Windows.Forms.TextBox();
             this.CheckInIDLabel = new System.Windows.Forms.Label();
@@ -42,6 +47,7 @@
             // 
             // CheckInID
             // 
+            this.CheckInID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CheckInID.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
             this.CheckInID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckInID.HideSelection = false;
@@ -65,6 +71,7 @@
             // CheckInTime
             // 
             this.CheckInTime.CalendarFont = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CheckInTime.CalendarMonthBackground = System.Drawing.SystemColors.ActiveCaptionText;
             this.CheckInTime.CustomFormat = "h:mm tt, MMM dd yyyy";
             this.CheckInTime.Enabled = false;
             this.CheckInTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -73,7 +80,7 @@
             this.CheckInTime.Name = "CheckInTime";
             this.CheckInTime.Size = new System.Drawing.Size(225, 26);
             this.CheckInTime.TabIndex = 2;
-            this.CheckInTime.Value = new System.DateTime(2022, 6, 21, 19, 13, 5, 0);
+            this.CheckInTime.Value = System.DateTime.Now;
             // 
             // CheckInTimeLabel
             // 
@@ -97,12 +104,23 @@
             // 
             // CheckInAmount
             // 
+            this.CheckInAmount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CheckInAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckInAmount.Location = new System.Drawing.Point(222, 171);
+            this.CheckInAmount.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.CheckInAmount.Name = "CheckInAmount";
             this.CheckInAmount.Size = new System.Drawing.Size(225, 31);
             this.CheckInAmount.TabIndex = 5;
             this.CheckInAmount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.CheckInAmount.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             // 
             // CheckInSubmit
             // 
@@ -127,6 +145,7 @@
             // 
             // CheckInItemName
             // 
+            this.CheckInItemName.BackColor = System.Drawing.Color.Gainsboro;
             this.CheckInItemName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CheckInItemName.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CheckInItemName.Location = new System.Drawing.Point(222, 108);
@@ -135,10 +154,12 @@
             this.CheckInItemName.ReadOnly = true;
             this.CheckInItemName.Size = new System.Drawing.Size(225, 31);
             this.CheckInItemName.TabIndex = 8;
+            this.CheckInItemName.Text = "Test Item";
             this.CheckInItemName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // CheckInForm
             // 
+            this.AcceptButton = this.CheckInSubmit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
@@ -152,12 +173,12 @@
             this.Controls.Add(this.CheckInTime);
             this.Controls.Add(this.CheckInIDLabel);
             this.Controls.Add(this.CheckInID);
-            this.Enabled = false;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "CheckInForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "CheckInForm";
             ((System.ComponentModel.ISupportInitialize)(this.CheckInAmount)).EndInit();
             this.ResumeLayout(false);

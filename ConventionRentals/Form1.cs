@@ -23,12 +23,14 @@ namespace ConventionRentals
         //Selected Check in
         private void CheckInButton_Click(object sender, EventArgs e)
         {
-            if (treeView1.SelectedNode.Text != "Controllers") 
+            //if (treeView1.SelectedNode.Text != "Controllers") 
+            if (treeView1.SelectedNode.Text != null)
             {
                 CheckInForm CheckIn = new CheckInForm();
 
                 //Modify Basic Attributes
                 CheckIn.Text = "Check In " + treeView1.SelectedNode.Text;
+        
 
                 //Stop resizing
                 CheckIn.FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -73,6 +75,16 @@ namespace ConventionRentals
             }
 
             pictureBox1.Image = bit;
+        }
+
+        private void RentalsBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void StockBox_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }
